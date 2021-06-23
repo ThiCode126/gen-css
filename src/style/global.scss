@@ -25,8 +25,63 @@ h3 {
   text-align: center;
 }
 
+.right {
+  text-align: right;
+}
+
 .sketch-picker input {
   color: #000;
+}
+
+@keyframes cardAnim {
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes tada {
+  0% {
+    transform: rotate(0deg) scaleX(1) scaleY(1);
+  }
+  10% {
+    transform: rotate(-3deg) scaleX(0.8) scaleY(0.8);
+  }
+  20% {
+    transform: rotate(-3deg) scaleX(0.8) scaleY(0.8);
+  }
+  30% {
+    transform: rotate(3deg) scaleX(1.1) scaleY(1.1);
+  }
+  40% {
+    transform: rotate(-3deg) scaleX(1.1) scaleY(1.1);
+  }
+  50% {
+    transform: rotate(3deg) scaleX(1.1) scaleY(1.1);
+  }
+  60% {
+    transform: rotate(-3deg) scaleX(1.1) scaleY(1.1);
+  }
+  70% {
+    transform: rotate(3deg) scaleX(1.1) scaleY(1.1);
+  }
+  80% {
+    transform: rotate(-3deg) scaleX(1.1) scaleY(1.1);
+  }
+  90% {
+    transform: rotate(3deg) scaleX(1.1) scaleY(1.1);
+  }
+  100% {
+    transform: rotate(0deg) scaleX(1.1) scaleY(1.1);
+  }
 }
 
 /**

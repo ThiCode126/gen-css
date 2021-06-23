@@ -45,6 +45,7 @@ const BoxShadow = () => {
 
   const [formState, setFormState] = useState(defaultStateForm);
   const [formStatePreview, setFormStatePreview] = useState(defaultStatePreview);
+  const [cardAnim, setCardAnim] = useState(null);
 
   const alert = useAlert();
 
@@ -83,6 +84,11 @@ const BoxShadow = () => {
 
   const handleCopy = () => {
     alert.success("Copié");
+  };
+
+  const handleAddEx = (item, id) => {
+    setCardAnim(id);
+    setFormState(item);
   };
 
   return (
@@ -244,6 +250,7 @@ const BoxShadow = () => {
               {dataExample.map((item, k) => (
                 <div
                   className="card"
+                  id={k}
                   key={k}
                   style={{
                     boxShadow: `${item.inset ? "inset" : ""} ${
@@ -256,13 +263,21 @@ const BoxShadow = () => {
                     background: `rgba(${formStatePreview.boxColor.r}, ${formStatePreview.boxColor.g}, ${formStatePreview.boxColor.b}, ${formStatePreview.boxColor.a})`,
                     color: `rgba(${formStatePreview.textColor.r}, ${formStatePreview.textColor.g}, ${formStatePreview.textColor.b}, ${formStatePreview.textColor.a})`,
                   }}
-                  onClick={() => setFormState(item)}
+                  onClick={() => handleAddEx(item, k)}
+                  onAnimationEnd={() => setCardAnim(null)}
+                  cardAnim={cardAnim === k ? 1 : 0}
                 >
                   <h4>ThiCode</h4>
                   <img src="/assets/lake.jpg" alt="lake" />
+                  <img
+                    src="/assets/check.svg"
+                    className="check-icon"
+                    alt="check"
+                  />
                 </div>
               ))}
             </div>
+            <p className="right">Cliquez pour utiliser dans le générateur</p>
           </div>
           <div className="documentation">
             <h2>Documentation</h2>
@@ -297,7 +312,7 @@ const BoxShadow = () => {
               </a>
             </p>
             <img src="/assets/screen/box-shadow.png" alt="box-shadow" />
-            <p className="more">Compatibilité au 23/06/2021</p>
+            <p className="right">Compatibilité au 23/06/2021</p>
           </div>
         </div>
       </div>

@@ -70,6 +70,26 @@
           display: flex;
           flex-direction: column;
           align-items: center;
+          position: relative;
+
+          .check-icon {
+            display: none;
+            content: none;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            top: 60px;
+          }
+
+          &[cardAnim="1"] {
+            animation: tada linear 1s;
+            animation-iteration-count: 1;
+            transform-origin: 50% 50%;
+
+            .check-icon {
+              display: block;
+            }
+          }
 
           img {
             width: 110px;
@@ -89,9 +109,6 @@
       img {
         width: 100%;
         height: auto;
-      }
-      .more {
-        text-align: right;
       }
     }
   }
