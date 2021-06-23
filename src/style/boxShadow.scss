@@ -82,6 +82,18 @@
     .documentation {
       text-align: center;
     }
+
+    .compatibility {
+      text-align: center;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .more {
+        text-align: right;
+      }
+    }
   }
 }
 /**

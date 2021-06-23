@@ -286,6 +286,20 @@ const BoxShadow = () => {
               </a>
             </p>
           </div>
+          <div className="compatibility">
+            <h2>Compatibilité</h2>
+            <p>
+              <a
+                href="https://caniuse.com/css-boxshadow"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Can I use
+              </a>
+            </p>
+            <img src="/assets/screen/box-shadow.png" alt="box-shadow" />
+            <p className="more">Compatibilité au 23/06/2021</p>
+          </div>
         </div>
       </div>
     </section>
