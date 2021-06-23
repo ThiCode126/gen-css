@@ -1,5 +1,5 @@
 .content-wrapper {
-  width: 688px;
+  width: 350px;
   margin: 0 auto;
 }
 
@@ -17,8 +17,7 @@ a,
 a:visited,
 a:hover,
 a:focus {
-  text-decoration: none;
-  color: var(--white);
+  color: var(--grey);
 }
 
 h2,
@@ -28,6 +27,15 @@ h3 {
 
 .sketch-picker input {
   color: #000;
+}
+
+/**
+* ? Tablet
+*/
+@media (min-width: 768px) {
+  .content-wrapper {
+    width: 688px;
+  }
 }
 
 /**
