@@ -270,7 +270,7 @@ const BoxShadow = () => {
                   <h4>ThiCode</h4>
                   <img src="/assets/lake.jpg" alt="lake" />
                   <img
-                    src="/assets/check.svg"
+                    src="/assets/check.png"
                     className="check-icon"
                     alt="check"
                   />
