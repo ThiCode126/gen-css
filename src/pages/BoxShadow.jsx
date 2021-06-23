@@ -3,6 +3,7 @@ import reactCSS from "reactcss";
 import ColorPicker from "../Components/ColorPicker";
 import { ReactSVG } from "react-svg";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { useAlert } from "react-alert";
 
 import dataExample from "../data.json";
 
@@ -40,11 +41,12 @@ const BoxShadow = () => {
       b: "55",
       a: "1",
     },
-    copied: false,
   };
 
   const [formState, setFormState] = useState(defaultStateForm);
   const [formStatePreview, setFormStatePreview] = useState(defaultStatePreview);
+
+  const alert = useAlert();
 
   const styles = reactCSS({
     default: {
@@ -80,10 +82,7 @@ const BoxShadow = () => {
   };
 
   const handleCopy = () => {
-    console.log("Copy");
-    let oldState = { ...formState };
-    oldState["copied"] = true;
-    setFormState(oldState);
+    alert.success("Copié");
   };
 
   return (
