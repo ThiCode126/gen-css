@@ -1,0 +1,40 @@
+.content-wrapper {
+  width: 688px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  background: var(--dark);
+  color: var(--white);
+}
+
+a,
+a:visited,
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: var(--white);
+}
+
+h2,
+h3 {
+  text-align: center;
+}
+
+.sketch-picker input {
+  color: #000;
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  .content-wrapper {
+    width: 1110px;
+  }
+}

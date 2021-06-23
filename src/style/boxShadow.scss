@@ -1,0 +1,136 @@
+#boxshadow {
+  .in-section {
+    .settings-zone {
+      display: flex;
+      justify-content: space-between;
+
+      .settings {
+        .row {
+          display: flex;
+          justify-content: space-between;
+          gap: 32px;
+          margin-bottom: 8px;
+        }
+      }
+
+      .preview {
+        .preview-block {
+          width: 350px;
+          height: 350px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .box-to-shadow {
+            height: 200px;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+              width: 150px;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+
+    .result-zone {
+      .result-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input#result {
+          width: 450px;
+        }
+
+        svg {
+          height: 34px;
+          width: 34px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .example {
+      .example-cards {
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        padding: 48px 20px;
+
+        .card {
+          height: 200px;
+          width: 200px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          img {
+            width: 150px;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .documentation {
+      text-align: center;
+    }
+  }
+}
+
+/**
+* ? DeskTop
+*/
+@media (min-width: 1440px) {
+  #boxshadow {
+    .in-section {
+      .settings-zone {
+        .preview {
+          .preview-block {
+            width: 650px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .box-to-shadow {
+              width: 550px;
+              height: 350px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              img {
+                width: 350px;
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+
+      .example {
+        .example-cards {
+          gap: 42px;
+          padding: 48px 63px;
+
+          .card {
+            height: 300px;
+            width: 300px;
+
+            img {
+              width: 200px;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

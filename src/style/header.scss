@@ -1,0 +1,20 @@
+#header-site {
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 24px;
+
+    a {
+      text-decoration: none;
+      background: var(--white);
+      color: var(--dark);
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 24px;
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+}
