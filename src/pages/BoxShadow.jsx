@@ -187,7 +187,7 @@ const BoxShadow = () => {
                   type="checkbox"
                   name="inset"
                   id="inset"
-                  value={formState.inset}
+                  checked={formState.inset}
                   onChange={handleChange}
                 />
               </div>
